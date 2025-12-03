@@ -426,3 +426,46 @@ resetBtn.addEventListener('click', function () {
    8) Initialize
    ------------------------- */
 renderQuestions();
+
+// ---------------------------
+// COPY RESULT FUNCTION
+// ---------------------------
+function copyResult(resultText) {
+    navigator.clipboard.writeText(resultText)
+        .then(() => {
+            alert("Result copied to clipboard!");
+        })
+        .catch(err => {
+            alert("Failed to copy result.");
+        });
+}
+
+// ---------------------------
+// DOWNLOAD RESULT FUNCTION
+// ---------------------------
+function downloadResult(resultText) {
+    const blob = new Blob([resultText], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "Personality_Result.txt";
+    document.body.appendChild(a);
+    a.click();
+
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+// ---------------------------
+// EVENT LISTENERS (Attach buttons)
+// ---------------------------
+document.getElementById("copyBtn").addEventListener("click", () => {
+    const text = document.getElementById("result").innerText;
+    copyResult(text);
+});
+
+document.getElementById("downloadBtn").addEventListener("click", () => {
+    const text = document.getElementById("result").innerText;
+    downloadResult(text);
+});
