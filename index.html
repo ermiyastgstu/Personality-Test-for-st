@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personality Test for students</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container" id="app">
+    <header class="header">
+      <h1 class="title" > Welcome To<i> Futurepath for Ethiopians </i> Personality test website</h1>
+      <p class="subtitle"> This website contains 
+        50 questions that are used to calculate combined personality (MBTI, Ocean and Enneagram).So Please students rate 1 (Strongly disagree) → 5 (Strongly agree) to calculate your personality Examples for students are shown in parentheses.</p>
+      <hr>
+        <p class="subtitle">Before You go to test Do the following to get accurate <br>
+        </p>
+      <ol class="subtitle">
+        <li>
+          <b>Be Calm</b>— Avoid Stress or Strong Emotions like sad, anxious etc... br
+        </li>
+         <li>
+         Be Alone in a Quiet Place
+         </li>
+         <li>
+         Answer Based on Your Long-Term Behavior, Not Today. Ask yourself: “How have I usually behaved for the LAST 2–3 years?”
+         </li>
+         <li>
+         Be Honest — Don’t Pick the ‘Good’ or ‘Ideal’ Answer
+         </li>
+         <li>
+         Don’t Think Too Much — Choose Your First Natural Reaction </li>
+         <li>
+         Don’t Take the Test Twice in the Same Day
+         </li>
+         <li>
+         Avoid External Influences like social Media 
+         </li>
+        <li>
+         Understand That No Person Is 100% One Type
+         </li>
+      </ol>
+      <hr>
+    </header>
+
+    <form id="quizForm" class="quiz-form" autocomplete="off">
+      <div id="questions" class="questions-grid" aria-live="polite"></div>
+
+      <div class="form-actions">
+        <button type="submit" id="submitBtn" class="btn primary">Submit</button>
+        <button type="button" id="resetBtn" class="btn ghost">Reset</button>
+      </div>
+
+      <p class="note"> After you click submit button the result will appear Here....</p>
+    </form>
+
+    <section id="result" class="result hidden" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
