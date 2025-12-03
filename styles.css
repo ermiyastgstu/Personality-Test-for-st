@@ -60,3 +60,18 @@ input[type="radio"]:focus-visible + span { outline: 3px solid rgba(37,99,235,0.1
   .radio-label{padding:6px 6px; font-size:12px}
   .k{min-width:110px}
 }
+
+#result-actions button {
+    padding: 10px 16px;
+    margin-right: 10px;
+    background: #0069ff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#result-actions button:hover {
+    background: #004fcc;
+}
